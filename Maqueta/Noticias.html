@@ -1,41 +1,220 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>NOTICIAS - FUNDACION "LA CASITA DEL ARBOL"</title>
 
+<script async="false" type="text/javascript"
+    src="chrome-extension://fnjhmkhhmkbjkkabndcnnogagogbneec/in-page.js"></script>
+
+<head>
     <meta charset="utf=8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog de la fundacion 'La casita del arbol'"" />
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <meta name="author" content="&copy; Grupo 13 - Comisión 2 - Informatorio 2022">
+    <!--  Fav icon -->
+    <link rel=" apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
     <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
+    <title>Fundación La Casita del Arbol</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.0/examples/navbars/navbar.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body">
-<!-- Encabezado del Blog-->
-    <header>
-        <a href="/index.html" title="Fundación 'La casita del arbol'">
-        <img height="108" src="images/BackgroundEraser_20220727_150743449.png" alt="Logo casita">
-        </a>
-        <section>
-        <h1>FUNDACION "LA CASITA DEL ARBOL"</h1>
-        <nav>
-            <a href="Noticias.html" class="head-menu">NOTICIAS</a>
-            <a href="Eventos.html" class="head-menu">EVENTOS</a>
-            <a href="Nosotros.html" class="head-menu">NOSOTROS</a>
-            <a href="Contacto.html" class="head-menu">CONTACTO</a>
+
+<body>
+
+    <main>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+            <div class="container-fluid">
+                <a class="logo" href="/index.html" title="Fundación 'La casita del arbol'">
+                    <img src="images/BackgroundEraser_20220727_150743449.png" alt="Logo casita">
+                    <h1 class="header-title">La Casita <br> del Arbol</h1>
+                </a>
+                
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="navbarsExample04">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Noticias.html">Noticias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
         </nav>
+
+        <H1 class="titular-seccion">NOTICIAS</H1>
+        <!-- Area de trabajo-->
+    </main>
+
+    <main class="main columns">
         
+
+        <section class="column main-column">
+            <a class="article first-article" href="#">
+                <figure class="article-image is-4by3">
+                    <img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-01.png"
+                        alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Hello World
+                    </h2>
+                    <p class="article-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                        pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                        facilisis.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros.
+                    </p>
+                    <footer class="article-info">
+                        <span>By Joe Smith</span>
+                        <span>42 comments</span>
+                    </footer>
+                </div>
+            </a>
+
+            <a class="article" href="#">
+                <figure class="article-image is-16by9">
+                    <img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-02.png"
+                        alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Hello World
+                    </h2>
+                    <p class="article-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                        pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                        facilisis.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                        pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                        facilisis.
+                    </p>
+                    <footer class="article-info">
+                        <span>By Joe Smith</span>
+                        <span>42 comments</span>
+                    </footer>
+                </div>
+            </a>
         </section>
-    </header>
 
-    <h1 class="titular-seccion">NOTICIAS</h1>
-
+        <section class="column">
+            <a class="article" href="#">
+                <figure class="article-image is-3by2">
+                    <img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-03.png"
+                        alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Hello World
+                    </h2>
+                    <p class="article-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <footer class="article-info">
+                        <span>By Joe Smith</span>
+                        <span>42 comments</span>
+                    </footer>
+                </div>
+            </a>
+            <a class="article" href="#">
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Hello World
+                    </h2>
+                    <p class="article-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <footer class="article-info">
+                        <span>By Joe Smith</span>
+                        <span>42 comments</span>
+                    </footer>
+                </div>
+            </a>
+            <a class="article" href="#">
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Hello World
+                    </h2>
+                    <p class="article-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <footer class="article-info">
+                        <span>By Joe Smith</span>
+                        <span>42 comments</span>
+                    </footer>
+                </div>
+            </a>
+            <a class="article" href="#">
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Hello World
+                    </h2>
+                    <p class="article-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <footer class="article-info">
+                        <span>By Joe Smith</span>
+                        <span>42 comments</span>
+                    </footer>
+                </div>
+            </a>
+        </section>
+    </main>
+    <!-- Area de trabajo-->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; Grupo 13 - Comisión 2 - Informatorio 2022
+            </p>
+        </div>
+    </footer>
 </body>
+
 </html>

@@ -1,52 +1,229 @@
-header {
-    display: flex;
-    height: 108px;
-    font-family: sans-serif;
-    background-color: #4DAA57;
-    color: #ffffff;
-    align-items: center;
+*,
+::after,
+::before {
+	box-sizing: border-box;
 }
 
-    header h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 36px;
-    white-space: nowrap;
-    text-overflow: clip;
-
+main {
+	display: block;
 }
 
-a {
-    text-decoration: none;
+/* Fonts*/
+html {
+	background-color: #f4eded;
+	font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+/*Body styles*/
+body {
+	margin: 0;
 }
 
-.head-menu {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 600;
-    margin-right: 50px;
-}
-.head-menu:hover {
-    color: #254D32;
-}
-
-@media (max-width: 400px){
-    header { 
-        flex-direction: column;
-    }
-
-    nav {
-        padding: 10px 0px;
-    };
-}
-
-body {  
-    margin: 0;
+#index-body {
+	display: flex;
+	flex-direction: column;
+	background-image: url(/images/ninios-merendando.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0;
+	height: 100vh;
 }
 
 .titular-seccion {
-    font-family: Helvetica;
-    font-size: 100px;
-    color: #254D32;
-    margin-top: 0px;
+	font-size: 4.5em;
+	color: #254d32;
+	margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*Footer styles*/
+footer {
+	font-size: small;
+	font-weight: bold;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	background-color: #4daa57;
+}
+
+/*Other styles*/
+a {
+	text-decoration: none;
+}
+
+div, h2, p, figure {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin: 0 0;
+    max-width: 1040px;
+    padding: 20px;
+}
+
+/* .columns {
+    display: flex;
+} */
+
+.column {
+    /* display: flex; */
+    flex: 1;
+    flex-direction: column;
+}
+
+.main-column {
+    flex: 2;
+}
+
+.article {
+    background: white;
+    color: #666;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-basis: auto;
+    margin: 10px;
+}
+
+.article-image {
+    background: #eee;
+    display: block;
+    padding-top: 75%;
+    position: relative;
+    width: 100%;
+}
+
+.article-image img {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.article-image.is-3by2 {
+    padding-top: 66.6666%;
+}
+
+.article-image.is-16by9 {
+    padding-top: 56.25%;
+}
+
+.article-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.article-title {
+    color: #333;
+    flex-shrink: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.article-content {
+    flex: 1;
+    margin-top: 5px;
+}
+
+.article-info {
+    display: flex;
+    font-size: 0.85em;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 800px) {
+    .columns, .column {
+        display: flex;
+    }
+}
+
+/*Header styles*/
+
+
+.header-title{
+    color: #ffffff;
+    font-size: 4vh;
+
+}
+
+.logo {
+    display: flex;
+	
+    flex-wrap: wrap;
+}
+.logo img {
+    display: block  ;
+	height: 10vh;
+    left: 0;
+    position: static  ;
+    padding: 10px 10px;
+}
+
+.head-menu {
+	color: #ffffff;
+	font-size: 4vh;
+	font-weight: bold;
+	padding: 0px 25px;
+    flex-direction: row ;
+}
+
+.head-menu:hover {
+	color: #254d32;
+}
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin-bottom: 0px;
+}
+.bg-dark {
+    background-color: #4daa57!important;
+}
+
+nav {
+    margin-bottom: 0px;
 }
