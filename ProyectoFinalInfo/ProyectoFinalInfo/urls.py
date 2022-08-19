@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from apps.noticias_app import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('nosotros', views.nosotros, name='nosotros'),
+    path('noticias', views.noticias, name='noticias'),
+    path('eventos', views.eventos, name='eventos'),
+    path('contacto', views.contacto, name='contacto'),
 ]

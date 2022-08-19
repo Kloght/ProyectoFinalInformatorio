@@ -1,1 +1,4 @@
 ProyectiFinalInfo/settings/local.Py
+ProyectiFinalInfo/settings/__pycache__
+apps/noticias_app/__pycache__
+ProyectiFinalInfo/__pycache__

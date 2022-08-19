@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
 
 <script async="false" type="text/javascript"
@@ -11,11 +12,11 @@
     <meta name="description" content="Blog de la fundacion 'La casita del arbol'"" />
     <meta name=" author" content="&copy; Grupo 13 - Comisión 2 - Informatorio 2022">
     <!--  Fav icon -->
-    <link rel=" apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel=" apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'images/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <!-- Fonts -->
@@ -45,7 +46,7 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{% static '/style.css' %}">
 
 </head>
 
@@ -54,8 +55,8 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
             <div class="container-fluid">
                 <div>
-                    <a class="logo" href="/index.html" title="Fundación 'La casita del arbol'">
-                        <img src="images/BackgroundEraser_20220727_150743449.png" alt="Logo casita">
+                    <a class="logo" href="{% url 'index' %}" title="Fundación 'La casita del arbol'">
+                        <img src="{% static 'images/BackgroundEraser_20220727_150743449.png' %}" alt="Logo casita">
                         <h1 class="header-title">La Casita <br> del Arbol</h1>
                     </a>
                 </div>
@@ -70,16 +71,16 @@
                     <div class="navbar-collapse collapse" id="navbarsExample04">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="Noticias.html">Noticias</a>
+                                <a class="nav-link active" aria-current="page" href="{% url 'noticias' %}">Noticias</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="Eventos.html">Eventos</a>
+                                <a class="nav-link active" href="{% url 'eventos' %}">Eventos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="Nosotros.html">Nosotros</a>
+                                <a class="nav-link active" href="{% url 'nosotros' %}">Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="Contacto.html">Contacto</a>
+                                <a class="nav-link active" href="{% url 'contacto' %}">Contacto</a>
                             </li>
                         </ul>
                     </div>
@@ -89,28 +90,27 @@
     </header>
     
     <main>
-    <!-- {% block 'base.html' %} -->
-        <section id="index-body">
-        </section>
-    <!-- {% endblock %} -->
+    {% block contenido %}
+
+    {% endblock %}
     </main>
 
     <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <footer class="d-flex justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-muted">&copy; Grupo 13 - Comisión 2 - Informatorio 2022 </p>
         <a href="/"
             class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <img src="images/BackgroundEraser_20220727_150743449.png" class="bi me-2" width="40">
+            <img src="{% static 'images/BackgroundEraser_20220727_150743449.png' %}" class="bi me-2" width="40">
             </img>
         </a>
         <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a class="nav-link px-2 text-muted" href="Noticias.html">Noticias</a></li>
-            <li class="nav-item"><a class="nav-link px-2 text-muted" href="Eventos.html">Eventos</a></li>
-            <li class="nav-item"><a class="nav-link px-2 text-muted" href="Nosotros.html">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link px-2 text-muted" href="Contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link px-2 text-muted" href="{% url 'noticias' %}">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link px-2 text-muted" href="{% url 'eventos' %}">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link px-2 text-muted" href="{% url 'nosotros' %}">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link px-2 text-muted" href="{% url 'contacto' %}">Contacto</a></li>
         </ul>
     </footer>
 

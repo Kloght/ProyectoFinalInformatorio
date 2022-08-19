@@ -1,6 +1,4 @@
-*,
-::after,
-::before {
+*, ::after, ::before {
 	box-sizing: border-box;
 }
 
@@ -37,17 +35,15 @@ div, h2, p, figure {
 }
 
 footer{
-    position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
 }
 
-
 #index-body {
 	display: flex;
 	flex-direction: column;
-	background-image: url(/images/ninios-merendando.jpg);
+	background-image: url('images/ninios-merendando.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -228,10 +224,9 @@ footer{
 
 /*Footer*/
 
-/* .my-4 {
-    display: block;
+.my-4 {
     background-color: #f4eded;
     bottom: 0px!important;
     margin-top: 30px!important;
     margin-bottom: 0px!important;
-} */
+}
