@@ -51,10 +51,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ProyectoFinalInfo.urls'
 
+TEMPLATES_DIR = os.path.join(os.path.dirname(BASE_DIR), "templates")
+TEMPLATES_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR), "templates/noticias")
+TEMPLATES_EVENTOS = os.path.join(os.path.dirname(BASE_DIR), "templates/eventos")
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(BASE_DIR), "templates")],
+        'DIRS': [TEMPLATES_DIR, TEMPLATES_NOTICIAS, TEMPLATES_EVENTOS, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
