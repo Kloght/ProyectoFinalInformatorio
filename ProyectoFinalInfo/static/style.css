@@ -202,6 +202,7 @@ div.links-box {
 }
 
 .mail {
+	color: #7818d7;
 	font-size: 30px;
 }
 
@@ -363,7 +364,7 @@ div.links-box {
 	color: white;
 }
 
-.youtube {
-	background: #bb0000;
+.e-mail {
+	background: #7818d7;
 	color: white;
 }

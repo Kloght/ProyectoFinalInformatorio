@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block contenido %}
+        <H1 class="titular-seccion">{{noticia.titulo}}</H1>
+        <!-- <H1 class="titular-seccion"> </H1> -->
+
+        <div class="date">{{ noticia.creado }}</div>
+
+        <p>
+            {{ noticia.contenido }}
+        </p>
+        
+{% endblock %}

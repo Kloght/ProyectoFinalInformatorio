@@ -15,17 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include,path
-from django.urls import re_path as url
+from django.urls import re_path
 from django.conf.urls.static import static
 from django.conf import settings
 from apps.noticias_app import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('nosotros', views.nosotros, name='nosotros'),
-    path('noticias', views.noticias, name='noticias'),
-    path('eventos', views.eventos, name='eventos'),
-    path('contacto', views.contacto, name='contacto'),
-    url('noticias/', include('apps.noticias_app.urls')),
+    path('noticia/<int:id>/', views.noticiadetalle, name='noticiadetalle')
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT,show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, show_indexes=True)
