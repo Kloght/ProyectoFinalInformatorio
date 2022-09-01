@@ -45,6 +45,9 @@ footer {
 	left: 0;
 }
 
+input {
+	margin: 5px;
+}
 #index-body {
 	display: flex;
 	flex-direction: column;
@@ -56,6 +59,10 @@ footer {
 	height: 100vh;
 }
 
+.user-welcome{
+	color: #ffc107!important;
+	font-style: italic;
+}
 .titular-seccion {
 	font-size: 40px;
 	font-weight: bold;
@@ -63,6 +70,11 @@ footer {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	margin-left: 30px;
+}
+
+.date{
+	color:#555;
+	margin-left: 40px;
 }
 
 .nosotros-info {
@@ -84,18 +96,21 @@ footer {
 
 .main {
 	margin: 0 0;
-	max-width: 1040px;
+	max-width: 800px;
 	padding: 10px;
+	display: flex;
+	flex-direction: row;
 }
 
 .columns {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
+	max-width: 350px;
 }
 
 .column {
 	flex: 1;
-	flex-direction: column;
+	/* flex-direction: column; */
 }
 
 .main-column {
@@ -135,6 +150,22 @@ footer {
 
 .article-image.is-16by9 {
 	padding-top: 56.25%;
+}
+
+.detalle-img {
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	max-height: 500px;
+	margin: 10px 0px;
+}
+
+.detalle-img img{
+	max-width: 100%;
+	max-height: 500px!important;
+	width: fit-content;
+	background-color: black;
+	
 }
 
 .article-body {
@@ -288,6 +319,9 @@ div.links-box {
 	margin-bottom: 0px;
 }
 
+.nav-item {
+	color: #000000;
+}
 .bg-dark {
 	background-color: #4daa57 !important;
 }
@@ -304,9 +338,11 @@ div.links-box {
 	background-color: #254d32;
 }
 
-.login-text:hover {
+.login-text:hover, .login-button:hover {
 	color: chartreuse !important;
+	background-color: #254d32;
 }
+
 /*Footer*/
 
 .my-4 {
@@ -320,7 +356,7 @@ div.links-box {
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 .icon-bar {
 	position: fixed;
-	top: 30%;
+	top: 68%;
     right: 0%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
@@ -332,7 +368,7 @@ div.links-box {
     align-content: right;
 	display: block;
 	text-align: center;
-	padding: 16px;
+	padding: 10px;
 	transition: all 0.3s ease;
 	color: white;
 	font-size: 20px;
@@ -367,4 +403,12 @@ div.links-box {
 .e-mail {
 	background: #7818d7;
 	color: white;
+}
+
+.form-signin{
+	text-align-last: center;
+}
+
+.form-control {
+	text-align-last: start;
 }

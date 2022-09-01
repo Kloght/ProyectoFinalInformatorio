@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-from .models import Categoria, Noticia, Comentarios
+from .models import Categoria, Noticia, Comentarios, Evento
 
 
 # Register your models here.
@@ -38,3 +38,18 @@ class ComentariosAdmin(admin.ModelAdmin):
         queryset.update(aprobado=True)
 
 admin.site.register(Comentarios, ComentariosAdmin)
+
+class EventosAdmin(admin.ModelAdmin):
+    list_display = ('titulo','autor', 'img')
+    search_fields = ('titulo', 'autor', 'creado')
+
+    list_per_page = 25
+
+    readonly_fields = ['evento_img']
+
+    def evento_img(self, obj):
+        return mark_safe(
+            '<a href="{0}"><img src="{0}" width="30%"></a>'.format(self.img.url)
+        )
+
+admin.site.register(Evento, EventosAdmin)

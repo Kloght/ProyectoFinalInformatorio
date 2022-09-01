@@ -54,11 +54,13 @@ ROOT_URLCONF = 'ProyectoFinalInfo.urls'
 TEMPLATES_DIR = os.path.join(os.path.dirname(BASE_DIR), "templates")
 TEMPLATES_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR), "templates/noticias")
 TEMPLATES_EVENTOS = os.path.join(os.path.dirname(BASE_DIR), "templates/eventos")
+TEMPLATES_REGISTRATION = os.path.join(os.path.dirname(BASE_DIR), "templates/registration")
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR, TEMPLATES_NOTICIAS, TEMPLATES_EVENTOS, ],
+        'DIRS': [TEMPLATES_DIR, TEMPLATES_NOTICIAS, TEMPLATES_EVENTOS, TEMPLATES_REGISTRATION, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,7 +127,25 @@ STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR), 'static')),
 MEDIA = '/media/'
 MEDIA_ROOTS = os.path.join(os.path.dirname(BASE_DIR), 'media')
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+LOGIN_URL = '/login'
+LOGIN_REDIRECT_URL ='/'
+LOGOUT_REDIRECT_URL = '/'
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# # Default primary key field type
+# # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# # Update database configuration with $DATABASE_URL.
+# import dj_database_url  
+# db_from_env = dj_database_url.config(conn_max_age=500)  
+# DATABASES['default'].update(db_from_env)
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+# STATIC_URL = '/static/'
+# # Extra places for collectstatic to find static files.
+# STATICFILES_DIRS = (  
+#     os.path.join(BASE_DIR, 'static'),
+# )
+
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
