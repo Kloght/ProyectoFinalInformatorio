@@ -68,7 +68,7 @@ def noticiadetalle(request,id):
     context = {
         "noticia": datanoticia,
         "comentarios":lista_comentarios,
-        "MEDIA_ROOT": 'static/img/noticias/',
+        "MEDIA_ROOT": '/img/noticias/',
         "form" : ComentarioForm(),
     }
 
